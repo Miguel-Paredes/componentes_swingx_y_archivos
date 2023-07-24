@@ -1,26 +1,25 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class registro {
-    public JPanel rootPanel;
-    private JTextField nombreR;
+    public JPanel JPanel;
+    private JTextField nombrer;
     private JButton registrarseButton;
-    private JPasswordField contra;
-    private JTextField mensajetxt;
-    private JButton INICIARSESIÓNButton;
-    private String registro_usuario;
-    private String registro_cotrasenia;
-    private JLabel Registrate;
-    private JLabel Nombre;
-    private JTextField Nombrer;
-    private JLabel Contraseña;
-    private JPasswordField ContraseñaR;
+    private JPasswordField contraseniar;
+    private JTextField mensajeTxt;
+    private JButton iniciarSesionButton;
+    private String registroUsuario;
+    private String registroContrasenia;
+    private JLabel registrate;
+    private JLabel nombre;
+    private JTextField nombreR;
+    private JLabel contrasenia;
+    private JPasswordField contraseñaR;
 
     public registro() {
         registrarseButton.addActionListener(new ActionListener() {
@@ -29,28 +28,29 @@ public class registro {
                 // Aquí puedes implementar la lógica para registrar al usuario
                 // Por ahora, simplemente cerraremos la ventana de registro
                 infoUsuario usuarioN = new infoUsuario();
-                registro_usuario = nombreR.getText();
-                usuarioN.setUsuario(registro_usuario);
-                registro_cotrasenia = String.valueOf(contra.getPassword());
-                usuarioN.setContrasenia(registro_cotrasenia);
-                try{
-                    FileOutputStream nombreF = new FileOutputStream("USUARIOS.dat",true);
+                registroUsuario = nombreR.getText();
+                usuarioN.setUsuario(registroUsuario);
+                registroContrasenia = String.valueOf(contraseniar.getPassword());
+                usuarioN.setContrasenia(registroContrasenia);
+                try {
+                    FileOutputStream nombreF = new FileOutputStream("USUARIOS.dat", true);
                     ObjectOutputStream obd = new ObjectOutputStream(nombreF);
                     obd.writeObject(usuarioN);
-                    mensajetxt.setText("USUARIO REGISTRADO");
+                    mensajeTxt.setText("USUARIO REGISTRADO");
                     nombreR.setText("");
-                    contra.setText("");
+                    contraseniar.setText("");
                 } catch (FileNotFoundException ex) {
                     System.out.println("NO SE ENCUENTRA EL ARCHIVO " + ex);
                 } catch (IOException ex) {
-                    System.out.println("NO SE PUDO GUARDAR EL ARCHIVO" +ex);
+                    System.out.println("NO SE PUDO GUARDAR EL ARCHIVO" + ex);
                 }
             }
         });
-        INICIARSESIÓNButton.addActionListener(new ActionListener() {
+
+        iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame registroFrame = (JFrame) SwingUtilities.getWindowAncestor(rootPanel);
+                JFrame registroFrame = (JFrame) SwingUtilities.getWindowAncestor(JPanel);
                 registroFrame.setVisible(false);
 
                 JFrame loginframe = new JFrame("Login");
@@ -62,5 +62,4 @@ public class registro {
             }
         });
     }
-
 }

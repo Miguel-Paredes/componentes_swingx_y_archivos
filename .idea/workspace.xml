@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb66a63c-2d58-446b-8da1-419613b1e833" name="Changes" comment="update" />
+    <list default="true" id="fb66a63c-2d58-446b-8da1-419613b1e833" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inicio.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/inicio.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/registro.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/registro.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/usuario.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/usuario.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/usuario.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SzOn6dlV2UP0KKjYAnWlqtbR2b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -50,6 +61,7 @@
       <updated>1690146108587</updated>
       <workItem from="1690146109601" duration="1933000" />
       <workItem from="1690153231321" duration="4338000" />
+      <workItem from="1690164692352" duration="1281000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
