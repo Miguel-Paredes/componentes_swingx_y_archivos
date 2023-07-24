@@ -23,8 +23,6 @@ public class registro {
         registrarseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes implementar la lógica para registrar al usuario
-                // Por ahora, simplemente cerraremos la ventana de registro
                 infoUsuario usuarioN = new infoUsuario();
                 registroUsuario = nombrer.getText();
                 usuarioN.setUsuario(registroUsuario);
@@ -34,13 +32,13 @@ public class registro {
                     FileOutputStream nombreF = new FileOutputStream("USUARIOS.dat", true);
                     ObjectOutputStream obd = new ObjectOutputStream(nombreF);
                     obd.writeObject(usuarioN);
-                    mensajetxt.setText("USUARIO REGISTRADO");
+                    mensajetxt.setText("Usuario Registrado");
                     nombrer.setText("");
                     contraseniar.setText("");
                 } catch (FileNotFoundException ex) {
-                    System.out.println("NO SE ENCUENTRA EL ARCHIVO " + ex);
+                    System.out.println("No existe el archivo " + ex);
                 } catch (IOException ex) {
-                    System.out.println("NO SE PUDO GUARDAR EL ARCHIVO" + ex);
+                    System.out.println("No se ha guardado el archivo" + ex);
                 }
             }
         });

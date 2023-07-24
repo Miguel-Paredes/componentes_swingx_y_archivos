@@ -17,7 +17,7 @@ public class usuario {
                 frame1 = (JFrame) SwingUtilities.getWindowAncestor(JPanel);
                 frame1.setVisible(false);
 
-                JFrame frame2 = new JFrame("Login");
+                JFrame frame2 = new JFrame("inicio");
                 inicio ventanaPrincipal = new inicio();
                 frame2.setContentPane(ventanaPrincipal.JPanel);
                 frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

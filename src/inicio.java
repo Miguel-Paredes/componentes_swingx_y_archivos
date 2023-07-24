@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -38,12 +37,12 @@ public class inicio {
                             String usu = info.getUsuario();
                             String contra = new String(info.getContrasenia());
                             if (username.equals(usu) && password.equals(contra)) {
-                                System.out.println("Ingreso exitoso");
+                                System.out.println("Ingreso realizado con exito");
                                 usuValido = true;
                                 contraValida = true;
                                 break;
                             } else {
-                                System.out.println("No se ha realizado el registro");
+                                System.out.println("No se ha podido realizar el registro");
                                 usuario.setText("");
                                 contrasenia.setText("");
                             }
@@ -55,7 +54,7 @@ public class inicio {
                         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(JPanel);
                         frame.setVisible(false);
 
-                        JFrame usserFrame = new JFrame("USUARIO");
+                        JFrame usserFrame = new JFrame("usuario");
                         usuario usserventana = new usuario();
                         usserventana.nombreusuario.setText(username);
                         usserFrame.setContentPane(usserventana.JPanel);
@@ -66,7 +65,7 @@ public class inicio {
                 } catch (FileNotFoundException ex) {
                     throw new RuntimeException(ex);
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(JPanel, "Credenciales incorrecta. Inténtalo de nuevo.");
+                    JOptionPane.showMessageDialog(JPanel, "Usuario o contraseña incorrectos. Inténtalo de nuevo.");
                 } catch (ClassNotFoundException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -78,7 +77,7 @@ public class inicio {
             public void actionPerformed(ActionEvent e) {
                 JFrame loginFrame = (JFrame) SwingUtilities.getWindowAncestor(JPanel);
                 loginFrame.setVisible(false);
-                JFrame registroFrame = new JFrame("Registro");
+                JFrame registroFrame = new JFrame("registro");
                 registro registroVentana = new registro();
                 registroFrame.setContentPane(registroVentana.JPanel);
                 registroFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -89,7 +88,7 @@ public class inicio {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Inicio");
+        JFrame frame = new JFrame("inicio");
         frame.setContentPane(new inicio().JPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
