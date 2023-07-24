@@ -16,6 +16,11 @@ public class registro {
     private JButton INICIARSESIÓNButton;
     private String registro_usuario;
     private String registro_cotrasenia;
+    private JLabel Registrate;
+    private JLabel Nombre;
+    private JTextField Nombrer;
+    private JLabel Contraseña;
+    private JPasswordField ContraseñaR;
 
     public registro() {
         registrarseButton.addActionListener(new ActionListener() {

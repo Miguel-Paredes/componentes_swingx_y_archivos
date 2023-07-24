@@ -6,6 +6,8 @@ public class usuario {
     public JPanel rootPanel;
     private JButton salirButton;
     public JTextField datostxt;
+    private JLabel Usuario;
+    private JLabel Bienvenido;
 
     public usuario(){
         salirButton.addActionListener(new ActionListener() {
