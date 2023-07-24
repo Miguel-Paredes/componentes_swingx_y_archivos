@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class usuario {
     public JPanel JPanel;
     private JButton salirButton;
-    public JTextField datosTxt;
+    public JTextField datostxt;
     private JLabel usuario;
     private JLabel bienvenido;
 
