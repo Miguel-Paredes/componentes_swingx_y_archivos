@@ -5,7 +5,7 @@ import java.io.*;
 
 public class inicio {
     private JPanel Jpanel;
-    //
+    //hola
     private JLabel bienvenido;
     private JLabel mensaje1;
     private JLabel mensaje2;
