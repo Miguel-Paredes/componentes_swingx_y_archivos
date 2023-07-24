@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class inicio {
     private JPanel Jpanel;
@@ -9,8 +11,27 @@ public class inicio {
     private JLabel contrasenia;
     private JButton inicio;
     private JButton registrarse;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField ingreso_usuario;
+    private JPasswordField ingreso_contrasenia;
+    private boolean conta = true;
+    private boolean usu_valido;
+    private boolean contra_valida;
+    public String username;
+    public String password;
+
+
+
+    public inicio() {
+        inicio.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                username = ingreso_usuario.getText();
+                password =new String(ingreso_contrasenia.getPassword());
+                usu_valido = false;
+                contra_valida = false;
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("inicio");

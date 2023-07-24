@@ -64,7 +64,7 @@
           <text value="Crear una cuenta nueva"/>
         </properties>
       </component>
-      <component id="1f35d" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="1f35d" class="javax.swing.JTextField" binding="ingreso_usuario">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -72,7 +72,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="aa556" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="563cc" class="javax.swing.JPasswordField" binding="ingreso_contrasenia">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
