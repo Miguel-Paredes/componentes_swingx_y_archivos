@@ -56,7 +56,7 @@ public class inicio {
 
                         JFrame usserFrame = new JFrame("USUARIO");
                         usuario usserventana = new usuario();
-                        usserventana.datostxt.setText(username);
+                        usserventana.nombreusuario.setText(username);
                         usserFrame.setContentPane(usserventana.JPanel);
                         usserFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         usserFrame.pack();

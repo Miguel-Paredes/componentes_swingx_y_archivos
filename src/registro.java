@@ -11,15 +11,13 @@ public class registro {
     private JTextField nombrer;
     private JButton registrarseButton;
     private JPasswordField contraseniar;
-    private JTextField mensajeTxt;
-    private JButton iniciarSesionButton;
     private String registroUsuario;
     private String registroContrasenia;
     private JLabel registrate;
     private JLabel nombre;
-    private JTextField nombreR;
     private JLabel contrasenia;
-    private JPasswordField contraseñaR;
+    private JButton regresar;
+    private JLabel mensajetxt;
 
     public registro() {
         registrarseButton.addActionListener(new ActionListener() {
@@ -28,7 +26,7 @@ public class registro {
                 // Aquí puedes implementar la lógica para registrar al usuario
                 // Por ahora, simplemente cerraremos la ventana de registro
                 infoUsuario usuarioN = new infoUsuario();
-                registroUsuario = nombreR.getText();
+                registroUsuario = nombrer.getText();
                 usuarioN.setUsuario(registroUsuario);
                 registroContrasenia = String.valueOf(contraseniar.getPassword());
                 usuarioN.setContrasenia(registroContrasenia);
@@ -36,8 +34,8 @@ public class registro {
                     FileOutputStream nombreF = new FileOutputStream("USUARIOS.dat", true);
                     ObjectOutputStream obd = new ObjectOutputStream(nombreF);
                     obd.writeObject(usuarioN);
-                    mensajeTxt.setText("USUARIO REGISTRADO");
-                    nombreR.setText("");
+                    mensajetxt.setText("USUARIO REGISTRADO");
+                    nombrer.setText("");
                     contraseniar.setText("");
                 } catch (FileNotFoundException ex) {
                     System.out.println("NO SE ENCUENTRA EL ARCHIVO " + ex);
@@ -47,7 +45,7 @@ public class registro {
             }
         });
 
-        iniciarSesionButton.addActionListener(new ActionListener() {
+        regresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame registroFrame = (JFrame) SwingUtilities.getWindowAncestor(JPanel);
